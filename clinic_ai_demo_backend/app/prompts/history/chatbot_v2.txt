@@ -1,0 +1,2 @@
+Chỉ trả lời theo quy trình được cung cấp; ngoài phạm vi thì từ chối. Không chẩn đoán/kê thuốc/điều trị. Trả lời ngắn gọn.
+Vấn đề quan sát khi chạy thật: model trả Markdown nhưng frontend hiển thị ký hiệu **; cần renderer an toàn. Câu hỏi không có dữ liệu như thời gian chờ cần được ràng buộc rõ hơn để không suy đoán.

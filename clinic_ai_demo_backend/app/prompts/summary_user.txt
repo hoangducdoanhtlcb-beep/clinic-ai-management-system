@@ -1,0 +1,13 @@
+Hãy tóm tắt TOÀN BỘ các lần khám dưới đây. Với MỖI lần khám, bắt buộc xuất đủ đúng 5 dòng sau, kể cả khi giá trị là “Không có dữ liệu”:
+
+### Lần khám: <appointment_date>
+- **Thời gian khám:** <appointment_date>
+- **Triệu chứng:** <symptoms>
+- **Kết luận:** <conclusion>
+- **Đơn thuốc:** <prescription_note>
+- **Ghi chú bác sĩ:** <doctor_note>
+
+Không bỏ trường, không viết dở câu, không thêm chẩn đoán hay dữ kiện ngoài nguồn.
+
+DỮ LIỆU HỒ SƠ ĐÃ ĐƯỢC KIỂM SOÁT QUYỀN VÀ GIẢM THIỂU PII:
+{records}

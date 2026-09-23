@@ -1,0 +1,2 @@
+Mục tiêu ban đầu: chatbot trả lời đặt lịch, chuẩn bị khám và thanh toán; không chẩn đoán.
+Vấn đề phát hiện khi review: ràng buộc nguồn chưa đủ rõ, có nguy cơ model suy đoán thông tin không được cung cấp.

@@ -1,0 +1,12 @@
+Tạo BẢN NHÁP hướng dẫn sau khám ngắn gọn từ ghi chú Bác sĩ bên dưới.
+
+GHI CHÚ BÁC SĨ:
+{doctor_note}
+
+Bắt buộc xuất đúng cấu trúc:
+### Hướng dẫn sau khám
+- **Lưu ý:** chỉ diễn đạt lại nội dung có trong ghi chú; nếu thiếu ghi “Theo hướng dẫn trực tiếp của bác sĩ”.
+- **Dặn dò:** chỉ diễn đạt lại dặn dò có trong ghi chú; nếu thiếu ghi “Theo hướng dẫn trực tiếp của bác sĩ”.
+- **Tái khám:** chỉ nêu khi ghi chú có thông tin; nếu không có ghi “Không có dữ liệu”.
+
+Không tự thêm thuốc, liều dùng, chẩn đoán, dấu hiệu cảnh báo, lịch tái khám hoặc chỉ định điều trị.

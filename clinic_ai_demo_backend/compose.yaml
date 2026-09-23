@@ -1,0 +1,25 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: clinic_ai_postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: clinic_ai
+      POSTGRES_USER: clinic_user
+      POSTGRES_PASSWORD: clinic_pass
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - clinic_ai_pgdata:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U clinic_user -d clinic_ai"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  clinic_ai_pgdata:

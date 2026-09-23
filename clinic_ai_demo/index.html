@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0f6d67" />
+  <title>Phòng khám ICTU - Hệ thống quản lý</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.7 12 3l9 7.7v9.8a.5.5 0 0 1-.5.5h-5.7v-6.5H9.2V21H3.5a.5.5 0 0 1-.5-.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 20c.3-4 2.2-6 5.5-6s5.2 2 5.5 6M15.5 5.6A3 3 0 0 1 18 11M16 14c2.9 0 4.4 1.8 4.6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.8 21c.4-5 2.8-7.5 7.2-7.5S18.8 16 19.2 21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-doctor" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 20v-2c0-3.1 2.3-5.5 6-5.5s6 2.4 6 5.5v2M9 15.5V18m6-2.5V18M18.5 5.5h3m-1.5-1.5v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 3v4m10-4v4M3 10h18M7 14h2m3 0h2m3 0h1M7 18h2m3 0h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 3v5h5M9 12h6m-6 4h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-money" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 8h1m10 8h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10m5 10V4m6 16v-7m5 7V7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M19 13.5v-3l-2.1-.7-.7-1.7 1-2-2.1-2.1-2 1-1.7-.7L10.5 2h-3l-.7 2.1-1.7.7-2-1L1 5.9l1 2-.7 1.7L0 10.5v3l2.1.7.7 1.7-1 2 2.1 2.1 2-1 1.7.7.9 2.3h3l.7-2.1 1.7-.7 2 1 2.1-2.1-1-2 .7-1.7z" transform="translate(2 0) scale(.83)" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v4M8 12h.01M16 12h.01M8 16c2.4 1.4 5.6 1.4 8 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M10 4H5v16h5m5-4 4-4-4-4m4 4H9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="m4 16.5-.5 4 4-.5L19 8.5 15.5 5zM14 6.5l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M9 7V4h6v3m2 0-1 14H8L7 7m4 4v6m3-6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-pill" viewBox="0 0 24 24"><path d="M8.3 18.7a4.2 4.2 0 0 1-6-6l7-7a4.2 4.2 0 0 1 6 6z" transform="translate(3 0)" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8 10 6 6" stroke="currentColor" stroke-width="1.8"/></symbol>
+  </svg>
+
+  <div id="loginScreen" class="login-screen">
+    <div class="login-art">
+      <div class="brand brand-light">
+        <span class="brand-mark">ICTU</span>
+        <span><strong>Phòng khám ICTU</strong><small>Chăm sóc sức khỏe cộng đồng</small></span>
+      </div>
+      <div class="hero-copy">
+        <span class="eyebrow">PHÒNG KHÁM ICTU</span>
+        <h1>Chăm sóc sức khỏe tận tâm, thuận tiện và chuyên nghiệp</h1>
+        <p>Phòng khám ICTU cung cấp dịch vụ khám tổng quát, nội khoa, răng hàm mặt và theo dõi sức khỏe định kỳ cho người bệnh.</p>
+        <div class="hero-points">
+          <span>Khám tổng quát</span><span>Đặt lịch nhanh chóng</span><span>Thứ 2 - Thứ 7 • 07:00 - 17:00</span>
+        </div>
+      </div>
+      <div class="login-footnote">Phòng khám ICTU • TP. Thái Nguyên • Hotline: 1900 1234</div>
+    </div>
+    <div class="login-panel">
+      <div class="login-card">
+        <div class="mobile-brand brand">
+          <span class="brand-mark">ICTU</span>
+          <span><strong>Phòng khám ICTU</strong><small>Hệ thống quản lý phòng khám</small></span>
+        </div>
+        <span class="eyebrow dark">CỔNG QUẢN LÝ NỘI BỘ</span>
+        <h2>Đăng nhập</h2>
+        <p class="muted">Đăng nhập để sử dụng hệ thống. Bệnh nhân mới có thể đăng ký tài khoản trực tuyến.</p>
+        <form id="loginForm" class="form-stack">
+          <label>Tên đăng nhập<input id="loginUsername" autocomplete="username" value="admin" /></label>
+          <label>Mật khẩu<input id="loginPassword" type="password" autocomplete="current-password" value="admin123" /></label>
+          <button class="btn btn-primary btn-lg" type="submit">Đăng nhập</button>
+          <button id="openRegisterBtn" class="btn btn-outline btn-lg" type="button">Đăng ký tài khoản bệnh nhân</button>
+        </form>
+        <div class="divider"><span>tài khoản truy cập nhanh</span></div>
+        <div id="demoAccounts" class="demo-accounts"></div>
+        <p id="loginError" class="form-error hidden"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="appShell" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="brand sidebar-brand">
+        <span class="brand-mark">ICTU</span>
+        <span><strong>Phòng khám ICTU</strong><small>Clinic Management</small></span>
+      </div>
+      <div id="rolePill" class="role-pill"></div>
+      <nav id="sidebarNav" class="sidebar-nav"></nav>
+      <div class="sidebar-footer">
+        <div class="demo-mode"><span class="dot"></span><div><strong>Phòng khám ICTU</strong><small>Hệ thống đang hoạt động</small></div></div>
+        <button id="logoutBtn" class="nav-link danger"><svg><use href="#i-logout"></use></svg><span>Đăng xuất</span></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn menu-btn" aria-label="Mở menu">☰</button>
+        <div>
+          <h1 id="pageTitle">Tổng quan</h1>
+          <p id="pageSubtitle">Theo dõi hoạt động phòng khám hôm nay</p>
+        </div>
+        <div class="topbar-actions">
+          <div class="user-chip"><span id="userAvatar" class="avatar"></span><div><strong id="userName"></strong><small id="userRole"></small></div></div>
+        </div>
+      </header>
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden">
+    <div id="modal" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-head"><div><h3 id="modalTitle"></h3><p id="modalSubtitle" class="muted"></p></div><button id="modalClose" class="icon-btn"><svg><use href="#i-close"></use></svg></button></div>
+      <div id="modalBody" class="modal-body"></div>
+      <div id="modalFooter" class="modal-footer"></div>
+    </div>
+  </div>
+
+  <div id="toastStack" class="toast-stack"></div>
+  <script src="assets/app.js?v=report-aligned-v1"></script>
+</body>
+</html>
